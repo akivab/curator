@@ -1,0 +1,25 @@
+{
+  "name": "Curator",
+  "version": "1.0.0",
+
+  "description": "Curate content on the web",
+
+  "browser_action": {
+    "default_icon" : "icon.png",
+    "popup": "popup.html"
+  },
+
+  "background_page": "background.html",
+
+  "permissions": [
+    "tabs",
+    "webRequest",
+    "*://*/*"
+  ],
+
+  "content_scripts": [{
+      "matches": ["*://*/*"],
+      "js": ["curator.js", "song.js", "images.js", "screenshots.js", 
+             "content.js"]
+    }]
+}

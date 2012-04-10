@@ -1,0 +1,26 @@
+<html>
+<head>
+  <style>
+    body{ margin: 0; text-align: center;}
+    #main{
+      width: 176px;
+      height: 40px;
+      margin: auto;
+      background-image: url(/img/login_img.png);
+      background-position: center;
+      background-width: 300px;
+    }
+  </style>
+</head>
+<body>
+  {% if login_url %}
+  <a target="_blank" href="{{login_url}}">
+  <div id="main">&nbsp;</div></a>
+  {% else %}
+  <div>
+    Hey, {{user_name}}. 
+    <a href="{{logout_url}}">Logout?</a>
+  </div>
+  {% endif %}
+</body>
+</html>
